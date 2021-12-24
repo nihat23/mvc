@@ -1,0 +1,27 @@
+﻿@model MvcStok.Models.Entity.TBLMUSTERILER
+@{
+    ViewBag.Title = "MusteriGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Musteri", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.MUSTERID)
+        @Html.TextBoxFor(m => m.MUSTERID, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.MUSTERAD)
+        @Html.TextBoxFor(m => m.MUSTERAD, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.MUSTERISOYAD)
+        @Html.TextBoxFor(m => m.MUSTERISOYAD, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.TELEFON)
+        @Html.TextBoxFor(m => m.TELEFON, new { @class = "form-control" })
+    </div>
+    <br />
+    <div>
+        <button class="btn btn-danger"> Müşteri Güncelle</button>
+
+    </div>
+}
